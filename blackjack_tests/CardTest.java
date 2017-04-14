@@ -12,6 +12,10 @@ public class CardTest{
       aceOfSpades = new Card(1, Suit.SPADES);
     }
 
+    @Test
+    public void cardHasRank(){
+      assertEquals( 1,aceOfSpades.getRank() );
+    }
 
 
 }
