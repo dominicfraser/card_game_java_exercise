@@ -1,8 +1,10 @@
 package blackjack;
 
 public enum Suit{
-  SPADES,
-  HEARTS,
-  CLUBS,
-  DIAMONDS
+  Spades,
+  Hearts,
+  Clubs,
+  Diamonds
 }
+
+// in lower case as java doesn't have a tidy capatalize function

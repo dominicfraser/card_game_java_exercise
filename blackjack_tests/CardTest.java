@@ -9,7 +9,7 @@ public class CardTest{
 
   @Before
     public void before(){
-      aceOfSpades = new Card(1, Suit.SPADES);
+      aceOfSpades = new Card(1, Suit.Spades);
     }
 
     @Test
@@ -17,6 +17,15 @@ public class CardTest{
       assertEquals( 1,aceOfSpades.getRank() );
     }
 
+    @Test
+    public void cardHasSuit(){
+      assertEquals( Suit.Spades, aceOfSpades.getSuit() );
+    }
+
+    @Test
+    public void hasDescription(){
+      assertEquals( "Ace of Spades",aceOfSpades.description() );
+    }
 
 }
 

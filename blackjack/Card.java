@@ -14,4 +14,14 @@ public class Card{
     return this.rank;
   }
 
+  public Suit getSuit(){
+    return this.suit;
+  }
+
+  public String description(){
+    String[] title = {"Ace", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King"};
+
+    return title[this.rank -1] + " of " + this.suit.toString();
+
+  }
 }
