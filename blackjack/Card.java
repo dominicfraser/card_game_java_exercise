@@ -9,6 +9,7 @@ public class Card{
     this.rank = rank;
     this.suit = suit;
   }
+  // add in exception/validation to limit rank
 
   public int getRank(){
     return this.rank;
