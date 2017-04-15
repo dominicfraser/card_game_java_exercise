@@ -19,4 +19,8 @@ public class Player{
     return this.hand;
   }
 
+  public String printHand(){
+    return this.hand[0].description() + ", " + this.hand[1].description();
+  }
+
 }
