@@ -3,6 +3,7 @@ import static org.junit.Assert.*;
 import org.junit.*;
 import blackjack.*;
 
+
 public class DeckTest{
 
   Card aceOfSpades;
@@ -12,18 +13,30 @@ public class DeckTest{
   public void before(){
     this.aceOfSpades = new Card(1, Suit.Spades);
     this.deck = new Deck();
+    this.deck.buildDeck();
   }
 
   @Test
   public void deckIs52Cards(){
-    this.deck.buildDeck();
     assertEquals( 52, this.deck.getDeck().size() );
   }
 
   @Test 
   public void containsStarterCard(){
-    this.deck.buildDeck();
-    assertEquals( true,this.deck.hasCard(this.aceOfSpades) );
+    assertEquals( true,this.deck.hasCardOfType(this.aceOfSpades) );
   }
+
+  @Test
+  public void cardInDeckHasDescription(){
+    String description_example = "test";
+    String description = this.deck.getDeck().get(3).description();
+    assertEquals( description_example.getClass(),description.getClass() );
+  }  
+
+  // @Test
+  // public void cardMatchesStarterCard(){
+  //   Card card_in_deck = this.deck.findCardByDescription("Ace of Spades");
+  //   assertEquals( card_in_deck,this.aceOfSpades );
+  // }
 
 }

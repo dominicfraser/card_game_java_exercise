@@ -28,14 +28,24 @@ public class Deck{
     Collections.shuffle(deck);
   }
 
-  public boolean hasCard(Card card){
+  public boolean hasCardOfType(Card card){
     for(Card card_in_deck : this.deck){
       if(card_in_deck.getSuit() == card.getSuit() && card_in_deck.getRank() == card.getRank() ){
         return true;
         }
       }
     return false;
-  }      
+  }
+
+  public Card findCardByDescription(String description){
+    for(Card card_in_deck : this.deck){
+      if(card_in_deck.description() == description){
+        return card_in_deck;
+      }
+    }
+    return null;
+  }
+
   
 
 }
