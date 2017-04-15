@@ -10,8 +10,20 @@ public class DeckTest{
 
   @Before
   public void before(){
-    aceOfSpades = new Card(1, Suit.Spades);
-    deck = new Deck();
+    this.aceOfSpades = new Card(1, Suit.Spades);
+    this.deck = new Deck();
+  }
+
+  @Test
+  public void deckIs52Cards(){
+    this.deck.buildDeck();
+    assertEquals( 52, this.deck.getDeck().size() );
+  }
+
+  @Test 
+  public void containsStarterCard(){
+    this.deck.buildDeck();
+    assertEquals( true,this.deck.hasCard(this.aceOfSpades) );
   }
 
 }
