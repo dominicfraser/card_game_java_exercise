@@ -1,6 +1,7 @@
 package blackjack;
 
 import java.util.ArrayList;
+import java.util.Scanner; 
 
 public class Game{
 
@@ -25,6 +26,23 @@ public class Game{
       player.setHand(this.deck.getDeck().get(0), this.deck.getDeck().get(1));
       this.deck.getDeck().remove(0);
       this.deck.getDeck().remove(0);
+    }
+  }
+
+  public int getHowManyPlayers(){
+    Scanner reader = new Scanner(System.in);
+    System.out.println("How many people wish to play? ");
+    int input = reader.nextInt();
+
+    return input;
+  }
+
+  public void createPlayers(int amountOfPlayers){
+    for(int i=1;i<amountOfPlayers;i++){
+      System.out.println("Player " + Integer.toString(i) + ", Enter Name: ");
+      Scanner scanner = new Scanner(System.in);
+      Player player = new Player(scanner.nextLine());
+      addPlayer(player);
     }
   }
 
