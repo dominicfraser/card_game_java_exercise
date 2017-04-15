@@ -32,11 +32,5 @@ public class DeckTest{
     String description = this.deck.getDeck().get(3).description();
     assertEquals( description_example.getClass(),description.getClass() );
   }  
-
-  // @Test
-  // public void cardMatchesStarterCard(){
-  //   Card card_in_deck = this.deck.findCardByDescription("Ace of Spades");
-  //   assertEquals( card_in_deck,this.aceOfSpades );
-  // }
-
+  
 }
