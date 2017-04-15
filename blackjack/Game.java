@@ -6,7 +6,6 @@ public class Game{
 
   private ArrayList<Player> players = new ArrayList<Player>();
   private Deck deck;
-  // private WinChecker winChecker = new WinChecker();
 
   public Game(){
     this.deck = new Deck();

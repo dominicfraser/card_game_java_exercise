@@ -22,4 +22,8 @@ public class PlayerTest{
     assertEquals("Two of Clubs, Three of Spades", player1.printHand());
   }
 
+  @Test
+  public void canSumHand(){
+    assertEquals( 5,this.player1.sumHand() );
+  }
 }

@@ -23,4 +23,8 @@ public class Player{
     return this.hand[0].description() + ", " + this.hand[1].description();
   }
 
+  public int sumHand(){
+    return this.hand[0].getRank() + this.hand[1].getRank();
+  }
+
 }
