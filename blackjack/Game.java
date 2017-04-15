@@ -21,5 +21,13 @@ public class Game{
     return this.players;
   }
 
+  public void deal(){
+    for(Player player : this.players){
+      player.setHand(this.deck.getDeck().get(0), this.deck.getDeck().get(1));
+      this.deck.getDeck().remove(0);
+      this.deck.getDeck().remove(0);
+    }
+  }
+
 
 }

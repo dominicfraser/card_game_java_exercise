@@ -10,4 +10,13 @@ public class Player{
     this.hand = new Card[2];
   }
 
+  public void setHand(Card card1, Card card2){
+    this.hand[0] = card1;
+    this.hand[1] = card2;
+  }
+
+  public Card[] getHand(){
+    return this.hand;
+  }
+
 }

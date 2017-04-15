@@ -23,4 +23,10 @@ public class GameTest{
     assertEquals( 2,this.game.getPlayers().size() );
   }
 
+  @Test
+  public void canDealtoHand(){
+    this.game.deal();
+    assertNotNull(this.player1.getHand()[0]);
+  }
+
 }
