@@ -38,7 +38,7 @@ public class Game{
   }
 
   public void createPlayers(int amountOfPlayers){
-    for(int i=1;i<amountOfPlayers;i++){
+    for(int i=1;i<=amountOfPlayers;i++){
       System.out.println("Player " + Integer.toString(i) + ", Enter Name: ");
       Scanner scanner = new Scanner(System.in);
       Player player = new Player(scanner.nextLine());
