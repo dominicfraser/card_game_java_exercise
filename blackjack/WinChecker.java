@@ -3,9 +3,13 @@ package blackjack;
 public class WinChecker{
 
 public static Player simpleWin(Game game){
-  Player winningPlayer = null;
+  Player winningPlayer = game.getPlayers().get(0);
 
-  return null;
+  for(Player player : game.getPlayers() )
+    if(winningPlayer.sumHand() < player.sumHand()){
+        winningPlayer = player;
+    }
+  return winningPlayer;
 }
 
 }
